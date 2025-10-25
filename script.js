@@ -87,15 +87,15 @@ function toggleAutoRefresh() {
     if (isAutoRefreshActive) {
         // 停止自动轮播
         clearInterval(autoRefreshInterval);
-        autoRefreshBtn.innerHTML = '<span>⏱️</span> 开启自动轮播（3秒/幅）';
+        autoRefreshBtn.innerHTML = '<span>⏱️</span> 开启自动轮播（10秒/幅）';
         isAutoRefreshActive = false;
         showNotification('已停止自动轮播');
     } else {
         // 开始自动轮播
-        autoRefreshInterval = setInterval(displayRandomPainting, 3000);
+        autoRefreshInterval = setInterval(displayRandomPainting, 10000);
         autoRefreshBtn.innerHTML = '<span>⏹️</span> 停止自动轮播';
         isAutoRefreshActive = true;
-        showNotification('已开启自动轮播，每3秒切换一幅画作');
+        showNotification('已开启自动轮播，每10秒切换一幅画作');
     }
 }
 
